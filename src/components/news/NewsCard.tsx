@@ -15,7 +15,7 @@ export default function NewsCard({ item }: { item: NewsItem }) {
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{item.excerpt}</p>
       <Link
         href={`/news/${item.slug}`}
-        className="mt-6 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-gold"
+        className="mt-6 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-teal"
       >
         Read More <ArrowRight size={16} />
       </Link>

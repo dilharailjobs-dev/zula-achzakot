@@ -15,7 +15,7 @@ export default function Values() {
             const Icon = icons[index % icons.length];
             return (
               <div key={value.title} className="border border-navy/10 p-6">
-                <Icon size={22} className="text-gold" strokeWidth={1.75} />
+                <Icon size={22} className="text-teal" strokeWidth={1.75} />
                 <h3 className="mt-4 text-base font-semibold tracking-tight text-navy">
                   {value.title}
                 </h3>

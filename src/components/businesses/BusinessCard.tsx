@@ -3,7 +3,7 @@ import type { Business } from "@/types/business";
 
 export default function BusinessCard({ business }: { business: Business }) {
   return (
-    <div className="flex flex-col justify-between border border-navy/10 bg-background p-8 transition-colors hover:border-gold/50">
+    <div className="flex flex-col justify-between border border-navy/10 bg-background p-8 transition-colors hover:border-teal/50">
       <div>
         <h3 className="text-xl font-semibold tracking-tight text-navy">{business.name}</h3>
         <p className="mt-2 text-sm font-medium uppercase tracking-wide text-gold">
@@ -15,7 +15,7 @@ export default function BusinessCard({ business }: { business: Business }) {
         href={business.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-8 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-gold"
+        className="mt-8 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-teal"
       >
         Visit Website <ArrowUpRight size={16} />
       </a>

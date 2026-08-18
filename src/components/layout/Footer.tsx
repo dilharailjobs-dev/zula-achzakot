@@ -36,7 +36,7 @@ export default function Footer() {
             {socialLinks.map((social, index) => (
               <span key={social.label} className="flex items-center gap-4">
                 {index > 0 && <span className="text-white/30">|</span>}
-                <a href={social.href} className="text-white/70 transition-colors hover:text-gold">
+                <a href={social.href} className="text-white/70 transition-colors hover:text-teal">
                   {social.label}
                 </a>
               </span>
@@ -53,7 +53,7 @@ export default function Footer() {
               .filter((link) => link.href !== "/")
               .map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition-colors hover:text-gold">
+                  <Link href={link.href} className="transition-colors hover:text-teal">
                     {link.label}
                   </Link>
                 </li>
@@ -68,7 +68,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             {businessLinks.map((link) => (
               <li key={link.label}>
-                <Link href={link.href} className="transition-colors hover:text-gold">
+                <Link href={link.href} className="transition-colors hover:text-teal">
                   {link.label}
                 </Link>
               </li>
@@ -81,7 +81,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             {legalLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="transition-colors hover:text-gold">
+                <Link href={link.href} className="transition-colors hover:text-teal">
                   {link.label}
                 </Link>
               </li>
@@ -93,15 +93,15 @@ export default function Footer() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Contact</p>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li className="flex items-start gap-2">
-              <Phone size={16} className="mt-0.5 shrink-0" />
+              <Phone size={16} className="mt-0.5 shrink-0 text-teal" />
               <span>{siteConfig.phone}</span>
             </li>
             <li className="flex items-start gap-2">
-              <Mail size={16} className="mt-0.5 shrink-0" />
+              <Mail size={16} className="mt-0.5 shrink-0 text-teal" />
               <span>{siteConfig.email}</span>
             </li>
             <li className="flex items-start gap-2">
-              <MapPin size={16} className="mt-0.5 shrink-0" />
+              <MapPin size={16} className="mt-0.5 shrink-0 text-teal" />
               <span>{siteConfig.address}</span>
             </li>
           </ul>

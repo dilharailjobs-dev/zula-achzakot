@@ -17,7 +17,7 @@ export default function TopBar() {
               {index > 0 && <span className="text-white/30">|</span>}
               <button
                 type="button"
-                className="tracking-wide transition-colors hover:text-gold"
+                className="tracking-wide transition-colors hover:text-teal"
                 aria-current={language.code === "en" ? "true" : undefined}
               >
                 {language.label}

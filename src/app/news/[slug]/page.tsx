@@ -40,7 +40,7 @@ export default async function NewsArticlePage({ params }: PageProps<"/news/[slug
       <Container className="max-w-3xl">
         <Link
           href="/news"
-          className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-gold"
+          className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-teal"
         >
           <ArrowLeft size={16} /> All News
         </Link>

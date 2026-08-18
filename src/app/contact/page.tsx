@@ -27,15 +27,15 @@ export default function ContactPage() {
             </h2>
             <ul className="mt-6 space-y-5 text-sm text-navy">
               <li className="flex items-start gap-3">
-                <Phone size={18} className="mt-0.5 shrink-0 text-gold" />
+                <Phone size={18} className="mt-0.5 shrink-0 text-teal" />
                 <span>{siteConfig.phone}</span>
               </li>
               <li className="flex items-start gap-3">
-                <Mail size={18} className="mt-0.5 shrink-0 text-gold" />
+                <Mail size={18} className="mt-0.5 shrink-0 text-teal" />
                 <span>{siteConfig.email}</span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="mt-0.5 shrink-0 text-gold" />
+                <MapPin size={18} className="mt-0.5 shrink-0 text-teal" />
                 <span>{siteConfig.address}</span>
               </li>
             </ul>

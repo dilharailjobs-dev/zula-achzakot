@@ -44,7 +44,7 @@ function validate(values: FormState): FormErrors {
 }
 
 const inputClasses =
-  "w-full border border-navy/20 bg-white px-4 py-3 text-sm text-navy placeholder:text-muted focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold";
+  "w-full border border-navy/20 bg-white px-4 py-3 text-sm text-navy placeholder:text-muted focus:border-teal focus:outline-none focus:ring-1 focus:ring-teal";
 
 export default function ContactForm() {
   const [values, setValues] = useState<FormState>(initialState);

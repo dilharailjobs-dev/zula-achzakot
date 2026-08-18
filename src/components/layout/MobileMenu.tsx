@@ -38,7 +38,7 @@ export default function MobileMenu() {
                     onClick={() => setOpen(false)}
                     className={cn(
                       "block py-4 text-sm font-medium uppercase tracking-wide text-navy",
-                      isActive ? "text-gold" : "hover:text-gold"
+                      isActive ? "text-gold" : "hover:text-teal"
                     )}
                   >
                     {link.label}

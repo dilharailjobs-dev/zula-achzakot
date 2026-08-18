@@ -15,7 +15,7 @@ export default function NewsPreview() {
           <SectionTitle eyebrow="News & Updates" title="From the Group" />
           <Link
             href="/news"
-            className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-gold"
+            className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-teal"
           >
             View All News <ArrowRight size={16} />
           </Link>
