@@ -42,8 +42,10 @@ export default function Header() {
                   <Link
                     href={link.href}
                     className={cn(
-                      "border-b-2 border-transparent pb-1 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-teal",
-                      isActive && "border-gold text-gold"
+                      "border-b-2 pb-1 text-sm font-medium uppercase tracking-wide transition-colors",
+                      isActive
+                        ? "border-gold text-gold"
+                        : "border-transparent text-navy hover:text-teal"
                     )}
                   >
                     {link.label}
