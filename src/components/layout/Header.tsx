@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Container from "@/components/common/Container";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { navLinks, siteConfig } from "@/config/site";
-import { cn, withBasePath } from "@/lib/utils";
+import { cn, isNavLinkActive, withBasePath } from "@/lib/utils";
 
 export default function Header() {
   const pathname = usePathname();
@@ -36,7 +36,7 @@ export default function Header() {
         <nav className="hidden lg:block" aria-label="Primary">
           <ul className="flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = isNavLinkActive(pathname, link.href);
               return (
                 <li key={link.href}>
                   <Link

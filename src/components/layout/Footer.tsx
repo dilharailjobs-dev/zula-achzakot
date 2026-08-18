@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Container from "@/components/common/Container";
+import SectionPattern from "@/components/common/SectionPattern";
 import { siteConfig, navLinks } from "@/config/site";
 import { businessLinks, legalLinks } from "@/lib/constants";
 import { withBasePath } from "@/lib/utils";
@@ -18,8 +19,9 @@ const companyLinks = navLinks.filter((link) =>
 
 export default function Footer() {
   return (
-    <footer className="border-t border-navy/10 bg-navy text-white">
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative overflow-hidden border-t border-navy/10 bg-navy text-white">
+      <SectionPattern />
+      <Container className="relative grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
             <span className="flex h-12 w-12 shrink-0 items-center justify-center bg-white p-1.5">
@@ -99,7 +101,7 @@ export default function Footer() {
         </div>
       </Container>
 
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/10">
         <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/60 sm:flex-row">
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.

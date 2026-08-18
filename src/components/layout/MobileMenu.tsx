@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/config/site";
-import { cn } from "@/lib/utils";
+import { cn, isNavLinkActive } from "@/lib/utils";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -30,7 +30,7 @@ export default function MobileMenu() {
         >
           <ul className="flex flex-col divide-y divide-navy/10 px-4">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive = isNavLinkActive(pathname, link.href);
               return (
                 <li key={link.href}>
                   <Link

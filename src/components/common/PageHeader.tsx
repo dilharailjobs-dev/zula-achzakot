@@ -1,4 +1,5 @@
 import Container from "@/components/common/Container";
+import SectionPattern from "@/components/common/SectionPattern";
 
 export default function PageHeader({
   eyebrow,
@@ -10,8 +11,9 @@ export default function PageHeader({
   description?: string;
 }) {
   return (
-    <section className="border-b border-navy/10 bg-navy text-white">
-      <Container className="py-16 sm:py-20">
+    <section className="relative overflow-hidden border-b border-navy/10 bg-navy text-white">
+      <SectionPattern />
+      <Container className="relative py-16 sm:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">{eyebrow}</p>
         <h1 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
           {title}
