@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import Container from "@/components/common/Container";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { navLinks, siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 
 export default function Header() {
   const pathname = usePathname();
@@ -16,7 +16,7 @@ export default function Header() {
       <Container className="relative flex items-center justify-between py-3 sm:py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src={siteConfig.logoIcon}
+            src={withBasePath(siteConfig.logoIcon)}
             alt={`${siteConfig.name} logo`}
             width={519}
             height={623}

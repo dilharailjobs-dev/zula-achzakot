@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import Container from "@/components/common/Container";
 import { siteConfig, navLinks } from "@/config/site";
 import { businessLinks, legalLinks } from "@/lib/constants";
+import { withBasePath } from "@/lib/utils";
 
 const socialLinks = [
   { label: "Facebook", href: "https://facebook.com/zulaachzakot" },
@@ -19,7 +20,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <span className="flex h-12 w-12 shrink-0 items-center justify-center bg-white p-1.5">
               <Image
-                src={siteConfig.logoIcon}
+                src={withBasePath(siteConfig.logoIcon)}
                 alt={`${siteConfig.name} logo`}
                 width={519}
                 height={623}
