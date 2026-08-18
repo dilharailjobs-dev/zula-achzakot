@@ -3,4 +3,5 @@ export type Leader = {
   name: string;
   title: string;
   bio: string;
+  image?: string;
 };

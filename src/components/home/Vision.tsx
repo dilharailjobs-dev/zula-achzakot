@@ -1,5 +1,6 @@
 import Container from "@/components/common/Container";
 import SectionTitle from "@/components/common/SectionTitle";
+import SectionPattern from "@/components/common/SectionPattern";
 
 const pillars = [
   {
@@ -21,8 +22,9 @@ const pillars = [
 
 export default function Vision() {
   return (
-    <section className="bg-navy-deep py-20 text-white sm:py-28">
-      <Container>
+    <section className="relative overflow-hidden bg-navy-deep py-20 text-white sm:py-28">
+      <SectionPattern />
+      <Container className="relative">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <SectionTitle eyebrow="Our Vision" title="Building for the Long Term" variant="dark" />
           <p className="max-w-2xl text-base leading-relaxed text-white/70">
@@ -38,7 +40,10 @@ export default function Vision() {
 
         <div className="mt-16 grid gap-px overflow-hidden border border-white/10 sm:grid-cols-3">
           {pillars.map((pillar) => (
-            <div key={pillar.step} className="bg-navy-deep p-8 sm:border-l sm:border-white/10 sm:first:border-l-0">
+            <div
+              key={pillar.step}
+              className="border-t-2 border-t-teal bg-navy-deep p-8 sm:border-l sm:border-l-white/10 sm:first:border-l-0"
+            >
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
                 {pillar.step}
               </p>

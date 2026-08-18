@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Container from "@/components/common/Container";
+import SectionPattern from "@/components/common/SectionPattern";
 import { leadership } from "@/data/leadership";
+import { withBasePath } from "@/lib/utils";
 
 export default function CorporateMessage() {
   const chairman = leadership[0];
@@ -9,8 +12,9 @@ export default function CorporateMessage() {
     .join("");
 
   return (
-    <section className="bg-navy py-20 text-white sm:py-28">
-      <Container>
+    <section className="relative overflow-hidden bg-navy py-20 text-white sm:py-28">
+      <SectionPattern />
+      <Container className="relative">
         <div className="border border-white/15 p-8 sm:p-14">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             From the Chairman
@@ -28,9 +32,21 @@ export default function CorporateMessage() {
               <p className="text-sm font-semibold">{chairman.name}</p>
               <p className="text-xs uppercase tracking-wide text-white/60">{chairman.title}</p>
             </div>
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center border border-white/20 text-base font-semibold uppercase tracking-wide text-gold">
-              {initials}
-            </span>
+            {chairman.image ? (
+              <div className="relative h-14 w-14 shrink-0 overflow-hidden border border-white/20">
+                <Image
+                  src={withBasePath(chairman.image)}
+                  alt={chairman.name}
+                  fill
+                  sizes="56px"
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center border border-white/20 text-base font-semibold uppercase tracking-wide text-gold">
+                {initials}
+              </span>
+            )}
           </div>
         </div>
       </Container>
