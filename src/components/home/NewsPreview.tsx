@@ -12,12 +12,12 @@ export default function NewsPreview() {
     <section className="border-t border-navy/10 bg-background py-20 sm:py-28">
       <Container>
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-          <SectionTitle eyebrow="News & Updates" title="From the Group" />
+          <SectionTitle eyebrow="Insights & Updates" title="From the Group" />
           <Link
             href="/news"
             className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-teal"
           >
-            View All News <ArrowRight size={16} />
+            View All Insights <ArrowRight size={16} />
           </Link>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

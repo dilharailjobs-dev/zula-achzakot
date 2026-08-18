@@ -1,5 +1,6 @@
 import Hero from "@/components/home/Hero";
 import Introduction from "@/components/home/Introduction";
+import GroupAtGlance from "@/components/home/GroupAtGlance";
 import Businesses from "@/components/home/Businesses";
 import Vision from "@/components/home/Vision";
 import Values from "@/components/home/Values";
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <Hero />
       <Introduction />
+      <GroupAtGlance />
       <Businesses />
       <Vision />
       <Values />

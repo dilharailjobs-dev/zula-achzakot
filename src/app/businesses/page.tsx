@@ -26,6 +26,12 @@ export default function BusinessesPage() {
               <BusinessCard key={business.id} business={business} />
             ))}
           </div>
+          <div className="mt-6 flex items-center justify-between border border-dashed border-navy/20 bg-background px-8 py-6">
+            <p className="text-sm font-medium uppercase tracking-wide text-muted">
+              Future Ventures
+            </p>
+            <p className="text-sm text-muted">Coming as the group grows</p>
+          </div>
         </Container>
       </section>
     </>

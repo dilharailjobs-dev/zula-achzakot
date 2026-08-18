@@ -3,6 +3,7 @@
 :root {
   --color-navy: #0b2a4a;
   --color-navy-secondary: #163d63;
+  --color-navy-deep: #071c2f;
   --color-gold: #c6a15b;
   --color-teal: #00a697;
   --color-background: #f5f6f8;
@@ -15,6 +16,7 @@
 @theme inline {
   --color-navy: var(--color-navy);
   --color-navy-secondary: var(--color-navy-secondary);
+  --color-navy-deep: var(--color-navy-deep);
   --color-gold: var(--color-gold);
   --color-teal: var(--color-teal);
   --color-background: var(--color-background);

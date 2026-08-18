@@ -18,7 +18,7 @@ export async function generateMetadata({
   const item = news.find((entry) => entry.slug === slug);
 
   if (!item) {
-    return { title: `News | ${siteConfig.name}` };
+    return { title: `Insights | ${siteConfig.name}` };
   }
 
   return {
@@ -42,7 +42,7 @@ export default async function NewsArticlePage({ params }: PageProps<"/news/[slug
           href="/news"
           className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wide text-navy transition-colors hover:text-teal"
         >
-          <ArrowLeft size={16} /> All News
+          <ArrowLeft size={16} /> All Insights
         </Link>
 
         <p className="mt-8 text-xs font-medium uppercase tracking-wide text-muted">

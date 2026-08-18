@@ -5,12 +5,14 @@ export default function SectionTitle({
   title,
   description,
   align = "left",
+  variant = "light",
   className,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
+  variant?: "light" | "dark";
   className?: string;
 }) {
   return (
@@ -20,9 +22,23 @@ export default function SectionTitle({
           {eyebrow}
         </p>
       )}
-      <h2 className="text-2xl font-semibold tracking-tight text-navy sm:text-3xl">{title}</h2>
+      <h2
+        className={cn(
+          "text-2xl font-semibold tracking-tight sm:text-3xl",
+          variant === "dark" ? "text-white" : "text-navy"
+        )}
+      >
+        {title}
+      </h2>
       {description && (
-        <p className="mt-4 text-base leading-relaxed text-muted">{description}</p>
+        <p
+          className={cn(
+            "mt-4 text-base leading-relaxed",
+            variant === "dark" ? "text-white/70" : "text-muted"
+          )}
+        >
+          {description}
+        </p>
       )}
     </div>
   );

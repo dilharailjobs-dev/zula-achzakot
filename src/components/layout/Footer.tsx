@@ -12,6 +12,10 @@ const socialLinks = [
   { label: "Instagram", href: "https://instagram.com/zulaachzakot" },
 ];
 
+const companyLinks = navLinks.filter((link) =>
+  ["/about", "/leadership", "/values", "/news"].includes(link.href)
+);
+
 export default function Footer() {
   return (
     <footer className="border-t border-navy/10 bg-navy text-white">
@@ -32,39 +36,13 @@ export default function Footer() {
               <p className="text-sm text-white/70">{siteConfig.tagline}</p>
             </div>
           </div>
-          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
-            {socialLinks.map((social, index) => (
-              <span key={social.label} className="flex items-center gap-4">
-                {index > 0 && <span className="text-white/30">|</span>}
-                <a href={social.href} className="text-white/70 transition-colors hover:text-teal">
-                  {social.label}
-                </a>
-              </span>
-            ))}
-          </div>
+          <p className="mt-6 max-w-[22ch] text-sm leading-relaxed text-white/70">
+            Building businesses. Creating opportunities. Growing together.
+          </p>
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-            Quick Links
-          </p>
-          <ul className="mt-4 space-y-3 text-sm text-white/80">
-            {navLinks
-              .filter((link) => link.href !== "/")
-              .map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="transition-colors hover:text-teal">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-            Our Businesses
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Business</p>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             {businessLinks.map((link) => (
               <li key={link.label}>
@@ -76,10 +54,10 @@ export default function Footer() {
           </ul>
 
           <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-            Legal
+            Company
           </p>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
-            {legalLinks.map((link) => (
+            {companyLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className="transition-colors hover:text-teal">
                   {link.label}
@@ -106,16 +84,34 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Follow</p>
+          <ul className="mt-4 space-y-3 text-sm text-white/80">
+            {socialLinks.map((social) => (
+              <li key={social.label}>
+                <a href={social.href} className="transition-colors hover:text-teal">
+                  {social.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-2 py-6 text-xs text-white/60 sm:flex-row">
+        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/60 sm:flex-row">
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <p>
-            Registered in Sri Lanka · {siteConfig.registrationNumber}
-          </p>
+          <div className="flex items-center gap-4">
+            {legalLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="transition-colors hover:text-teal">
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          <p>Registered in Sri Lanka · {siteConfig.registrationNumber}</p>
         </Container>
       </div>
     </footer>

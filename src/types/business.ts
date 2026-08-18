@@ -4,4 +4,5 @@ export type Business = {
   tagline: string;
   description: string;
   url: string;
+  image?: string;
 };

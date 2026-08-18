@@ -19,6 +19,6 @@ export const navLinks = [
   { label: "Businesses", href: "/businesses" },
   { label: "Leadership", href: "/leadership" },
   { label: "Values", href: "/values" },
-  { label: "News", href: "/news" },
+  { label: "Insights", href: "/news" },
   { label: "Contact", href: "/contact" },
 ];

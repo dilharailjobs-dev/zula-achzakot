@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ShieldCheck, Eye, Award, Users, TrendingUp } from "lucide-react";
 import PageHeader from "@/components/common/PageHeader";
 import Container from "@/components/common/Container";
 import SectionTitle from "@/components/common/SectionTitle";
@@ -10,8 +9,6 @@ export const metadata: Metadata = {
   title: `Values | ${siteConfig.name}`,
   description: "Zula Achzakot's vision, mission, and core values.",
 };
-
-const icons = [ShieldCheck, Eye, Award, Users, TrendingUp];
 
 export default function ValuesPage() {
   return (
@@ -48,19 +45,21 @@ export default function ValuesPage() {
       <section className="border-t border-navy/10 bg-white py-20 sm:py-28">
         <Container>
           <SectionTitle eyebrow="Our Values" title="What We Stand On" align="center" className="mx-auto" />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            {values.map((value, index) => {
-              const Icon = icons[index % icons.length];
-              return (
-                <div key={value.title} className="border border-navy/10 p-6">
-                  <Icon size={22} className="text-teal" strokeWidth={1.75} />
-                  <h3 className="mt-4 text-base font-semibold tracking-tight text-navy">
-                    {value.title}
-                  </h3>
+          <div className="mx-auto mt-14 max-w-3xl divide-y divide-navy/10 border-t border-navy/10">
+            {values.map((value, index) => (
+              <div
+                key={value.title}
+                className="flex flex-col gap-2 py-8 sm:flex-row sm:items-baseline sm:gap-10"
+              >
+                <p className="w-16 shrink-0 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <div>
+                  <h3 className="text-lg font-semibold tracking-tight text-navy">{value.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{value.description}</p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </Container>
       </section>

@@ -6,7 +6,7 @@ import { news } from "@/data/news";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `News | ${siteConfig.name}`,
+  title: `Insights | ${siteConfig.name}`,
   description: "Corporate news and updates from Zula Achzakot.",
 };
 
@@ -14,7 +14,7 @@ export default function NewsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="News & Updates"
+        eyebrow="Insights & Updates"
         title="From the Group"
         description="Corporate news and updates from Zula Achzakot."
       />

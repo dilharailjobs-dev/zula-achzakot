@@ -8,6 +8,7 @@ export const businesses: Business[] = [
     description:
       "Connecting skilled and semi-skilled Sri Lankan professionals with verified overseas employers across the Middle East, Asia, and Europe.",
     url: "https://www.zulaforeignagency.com",
+    image: "/images/businesses/foreign-agency/cover.jpg",
   },
   {
     id: "hostels",
@@ -16,5 +17,6 @@ export const businesses: Business[] = [
     description:
       "Comfortable, secure, and affordable long-stay accommodation for working professionals and travellers across Sri Lanka.",
     url: "https://www.zulahostels.com",
+    image: "/images/businesses/hostels/cover.jpg",
   },
 ];
