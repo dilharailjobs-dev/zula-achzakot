@@ -7,7 +7,7 @@ export const businesses: Business[] = [
     tagline: "International employment and recruitment",
     description:
       "Connecting skilled and semi-skilled Sri Lankan professionals with verified overseas employers across the Middle East, Asia, and Europe.",
-    url: "https://www.zulaforeignagency.com",
+    url: "https://zula-foreign-agency.vercel.app",
     image: "/images/businesses/foreign-agency/cover.jpg",
   },
   {
@@ -16,7 +16,7 @@ export const businesses: Business[] = [
     tagline: "Accommodation and hospitality services",
     description:
       "Comfortable, secure, and affordable long-stay accommodation for working professionals and travellers across Sri Lanka.",
-    url: "https://www.zulahostels.com",
+    url: "https://dilharailjobs-dev.github.io/zula-hostels/",
     image: "/images/businesses/hostels/cover.jpg",
   },
 ];
